@@ -2,9 +2,9 @@
   "name": "digiteka",
   "version": "1.0.0",
   "description": "",
-  "main": "server/index.js",
+  "main": "server/index.cjs",
   "scripts": {
-    "build": "tsc",
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node20 --format=cjs --outfile=server/index.js",
     "package": "npm run build && mcpb pack . ../../dist/digiteka.mcpb",
     "test": "npx @modelcontextprotocol/inspector npx tsx --env-file=.env src/index.ts"
   },
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@types/node": "^26.6.5",
+    "esbuild": "0.28.2",
     "typescript": "^7.0.2"
   },
   "engines": {

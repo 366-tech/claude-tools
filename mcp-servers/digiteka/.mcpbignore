@@ -1,6 +1,15 @@
+.env
+.env.*
+
 src/
 test/
+coverage/
 node_modules/
-tsconfig.json
 *.ts
-.env*
+tsconfig*.json
+esbuild.config.*
+.eslintrc*
+.prettierrc*
+.vscode/
+
+*.mcpb

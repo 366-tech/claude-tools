@@ -2,6 +2,9 @@ import { McpServer } from "@modelcontextprotocol/server";
 import { serveStdio } from "@modelcontextprotocol/server/stdio";
 import * as z from "zod/v4";
 
+process.on("uncaughtException", (e) => { console.error("uncaught:", e); process.exit(1); });
+process.on("unhandledRejection", (e) => { console.error("unhandled:", e); process.exit(1); });
+
 const API = "https://ws.digiteka.com/api";
 const { API_EMAIL, API_PASSWORD } = process.env;
 
