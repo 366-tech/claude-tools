@@ -1,0 +1,11 @@
+{
+  "name": "366",
+  "owner": { "name": "366" },
+  "plugins": [
+    {
+      "name": "marketing",
+      "source": "./plugins/marketing",
+      "description": "Marketing Team plugin"
+    }
+  ]
+}

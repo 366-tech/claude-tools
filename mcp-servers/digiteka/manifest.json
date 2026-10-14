@@ -1,0 +1,41 @@
+{
+  "manifest_version": "0.2",
+  "name": "digiteka",
+  "version": "1.0.0",
+  "description": "Digiteka MCP",
+  "author": {
+    "name": "Benjamin Clot",
+    "email": "benjamin.clot@366.fr"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/server/index.js"],
+      "env": {
+        "API_EMAIL": "${user_config.api_email}",
+        "API_PASSWORD": "${user_config.api_password}"
+      }
+    }
+  },
+  "license": "ISC",
+  "compatibility": {
+    "runtimes": { "node": ">=20.0.0" }
+  },
+  "user_config": {
+    "api_email": {
+      "type": "string",
+      "title": "API email",
+      "description": "Your API email",
+      "required": true
+    },
+    "api_password": {
+      "type": "string",
+      "title": "API password",
+      "description": "Your API password",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}
