@@ -6,6 +6,11 @@
       "name": "marketing",
       "source": "./plugins/marketing",
       "description": "Marketing Team plugin"
+    },
+    {
+      "name": "shared-brand",
+      "source": "./plugins/shared-brand",
+      "description": "Shared Brand plugin"
     }
   ]
 }
